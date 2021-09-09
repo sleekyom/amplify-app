@@ -1,14 +1,16 @@
 import "./App.css";
+import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
+import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Hello from V2</p>
-        <p>This is going to be a simple react app to test AWS amplify</p>
+      <header>
+        <h1>We now have Auth!</h1>
       </header>
+      <AmplifySignOut />
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
